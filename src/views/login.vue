@@ -1,6 +1,5 @@
 <template>
     <div >
-
         <div class="main-container">
             <div class="main-content">
                 <div class="row">
@@ -237,7 +236,7 @@
                     </div><!-- /.col -->
                 </div><!-- /.row -->
             </div><!-- /.main-content -->
-        </div>
+        </div><!-- /.main-container -->
     </div>
 </template>
 
@@ -245,7 +244,44 @@
 
 </style>
 
-<script type="text/javascript">
-    import $ from 'jquery'
+<script type="text/javascript" slot-scope="scope">
     $('body').attr('class', 'login-layout light-login');
+
+    jQuery(function($) {
+        $(document).on('click', '.toolbar a[data-target]', function(e) {
+            e.preventDefault();
+            var target = $(this).data('target');
+            $('.widget-box.visible').removeClass('visible');//hide others
+            $(target).addClass('visible');//show target
+        });
+    });
+
+
+
+    //you don't need this, just used for changing background
+    jQuery(function($) {
+        $('#btn-login-dark').on('click', function(e) {
+            $('body').attr('class', 'login-layout');
+            $('#id-text2').attr('class', 'white');
+            $('#id-company-text').attr('class', 'blue');
+
+            e.preventDefault();
+        });
+        $('#btn-login-light').on('click', function(e) {
+            $('body').attr('class', 'login-layout light-login');
+            $('#id-text2').attr('class', 'grey');
+            $('#id-company-text').attr('class', 'blue');
+
+            e.preventDefault();
+        });
+        $('#btn-login-blur').on('click', function(e) {
+            $('body').attr('class', 'login-layout blur-login');
+            $('#id-text2').attr('class', 'white');
+            $('#id-company-text').attr('class', 'light-blue');
+
+            e.preventDefault();
+        });
+
+    });
+
 </script>

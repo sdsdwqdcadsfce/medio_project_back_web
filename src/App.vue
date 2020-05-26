@@ -9,5 +9,8 @@
 </style>
 
 <script>
-
+  $('body').attr('class', 'login-layout light-login');
+  export default {
+    name: 'app'
+  }
 </script>
