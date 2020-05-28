@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.4",
+    "element-ui": "^2.4.5",
     "jQuery": "^1.7.4",
     "jquery": "^3.5.1",
     "vue": "^2.6.11",
@@ -17,6 +18,8 @@
     "@vue/cli-plugin-babel": "~4.3.0",
     "@vue/cli-plugin-router": "~4.3.0",
     "@vue/cli-service": "~4.3.0",
+    "less-loader": "^6.1.0",
+    "vue-cli-plugin-element": "^1.0.1",
     "vue-template-compiler": "^2.6.11"
   }
 }
